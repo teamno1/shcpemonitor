@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.afcat.shcpemonitor.modules.sys.dao.SysStatusMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.afcat.shcpemonitor.modules.sys.entity.SysStatus" >
+    <id column="ID" property="id" jdbcType="BIGINT" />
+    <result column="CUR_DATE" property="curDate" jdbcType="VARCHAR" />
+    <result column="WORK_SEQ" property="workSeq" jdbcType="VARCHAR" />
+    <result column="DAY_END_TIME" property="dayEndTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, CUR_DATE, WORK_SEQ, DAY_END_TIME
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from SYS_STATUS
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from SYS_STATUS
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.SysStatus" >
+    insert into SYS_STATUS (ID, CUR_DATE, WORK_SEQ, 
+      DAY_END_TIME)
+    values (#{id,jdbcType=BIGINT}, #{curDate,jdbcType=VARCHAR}, #{workSeq,jdbcType=VARCHAR}, 
+      #{dayEndTime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.SysStatus" >
+    insert into SYS_STATUS
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="curDate != null" >
+        CUR_DATE,
+      </if>
+      <if test="workSeq != null" >
+        WORK_SEQ,
+      </if>
+      <if test="dayEndTime != null" >
+        DAY_END_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="curDate != null" >
+        #{curDate,jdbcType=VARCHAR},
+      </if>
+      <if test="workSeq != null" >
+        #{workSeq,jdbcType=VARCHAR},
+      </if>
+      <if test="dayEndTime != null" >
+        #{dayEndTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.SysStatus" >
+    update SYS_STATUS
+    <set >
+      <if test="curDate != null" >
+        CUR_DATE = #{curDate,jdbcType=VARCHAR},
+      </if>
+      <if test="workSeq != null" >
+        WORK_SEQ = #{workSeq,jdbcType=VARCHAR},
+      </if>
+      <if test="dayEndTime != null" >
+        DAY_END_TIME = #{dayEndTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.SysStatus" >
+    update SYS_STATUS
+    set CUR_DATE = #{curDate,jdbcType=VARCHAR},
+      WORK_SEQ = #{workSeq,jdbcType=VARCHAR},
+      DAY_END_TIME = #{dayEndTime,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

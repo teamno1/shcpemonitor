@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.afcat.shcpemonitor.modules.sys.dao.TradeInfoMapper" >
+  <resultMap id="BaseResultMap" type="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+    <id column="ID" property="id" jdbcType="BIGINT" />
+    <result column="MEMBER_NO" property="memberNo" jdbcType="VARCHAR" />
+    <result column="MEMBER_NAME" property="memberName" jdbcType="VARCHAR" />
+    <result column="BRCH_NO" property="brchNo" jdbcType="VARCHAR" />
+    <result column="BRCH_NAME" property="brchName" jdbcType="VARCHAR" />
+    <result column="TRADE_USER_NO" property="tradeUserNo" jdbcType="VARCHAR" />
+    <result column="TRADE_USER_NAME" property="tradeUserName" jdbcType="VARCHAR" />
+    <result column="SETTLE_ACCOUNT_NO" property="settleAccountNo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, MEMBER_NO, MEMBER_NAME, BRCH_NO, BRCH_NAME, TRADE_USER_NO, TRADE_USER_NAME, SETTLE_ACCOUNT_NO
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from TRADE_INFO
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from TRADE_INFO
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+    insert into TRADE_INFO (ID, MEMBER_NO, MEMBER_NAME, 
+      BRCH_NO, BRCH_NAME, TRADE_USER_NO, 
+      TRADE_USER_NAME, SETTLE_ACCOUNT_NO)
+    values (#{id,jdbcType=BIGINT}, #{memberNo,jdbcType=VARCHAR}, #{memberName,jdbcType=VARCHAR}, 
+      #{brchNo,jdbcType=VARCHAR}, #{brchName,jdbcType=VARCHAR}, #{tradeUserNo,jdbcType=VARCHAR}, 
+      #{tradeUserName,jdbcType=VARCHAR}, #{settleAccountNo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+    insert into TRADE_INFO
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="memberNo != null" >
+        MEMBER_NO,
+      </if>
+      <if test="memberName != null" >
+        MEMBER_NAME,
+      </if>
+      <if test="brchNo != null" >
+        BRCH_NO,
+      </if>
+      <if test="brchName != null" >
+        BRCH_NAME,
+      </if>
+      <if test="tradeUserNo != null" >
+        TRADE_USER_NO,
+      </if>
+      <if test="tradeUserName != null" >
+        TRADE_USER_NAME,
+      </if>
+      <if test="settleAccountNo != null" >
+        SETTLE_ACCOUNT_NO,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="memberNo != null" >
+        #{memberNo,jdbcType=VARCHAR},
+      </if>
+      <if test="memberName != null" >
+        #{memberName,jdbcType=VARCHAR},
+      </if>
+      <if test="brchNo != null" >
+        #{brchNo,jdbcType=VARCHAR},
+      </if>
+      <if test="brchName != null" >
+        #{brchName,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeUserNo != null" >
+        #{tradeUserNo,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeUserName != null" >
+        #{tradeUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="settleAccountNo != null" >
+        #{settleAccountNo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+    update TRADE_INFO
+    <set >
+      <if test="memberNo != null" >
+        MEMBER_NO = #{memberNo,jdbcType=VARCHAR},
+      </if>
+      <if test="memberName != null" >
+        MEMBER_NAME = #{memberName,jdbcType=VARCHAR},
+      </if>
+      <if test="brchNo != null" >
+        BRCH_NO = #{brchNo,jdbcType=VARCHAR},
+      </if>
+      <if test="brchName != null" >
+        BRCH_NAME = #{brchName,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeUserNo != null" >
+        TRADE_USER_NO = #{tradeUserNo,jdbcType=VARCHAR},
+      </if>
+      <if test="tradeUserName != null" >
+        TRADE_USER_NAME = #{tradeUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="settleAccountNo != null" >
+        SETTLE_ACCOUNT_NO = #{settleAccountNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+    update TRADE_INFO
+    set MEMBER_NO = #{memberNo,jdbcType=VARCHAR},
+      MEMBER_NAME = #{memberName,jdbcType=VARCHAR},
+      BRCH_NO = #{brchNo,jdbcType=VARCHAR},
+      BRCH_NAME = #{brchName,jdbcType=VARCHAR},
+      TRADE_USER_NO = #{tradeUserNo,jdbcType=VARCHAR},
+      TRADE_USER_NAME = #{tradeUserName,jdbcType=VARCHAR},
+      SETTLE_ACCOUNT_NO = #{settleAccountNo,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
