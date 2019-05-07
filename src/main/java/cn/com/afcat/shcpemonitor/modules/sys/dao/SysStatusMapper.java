@@ -1,5 +1,6 @@
 package cn.com.afcat.shcpemonitor.modules.sys.dao;
 
+
 import cn.com.afcat.shcpemonitor.modules.sys.entity.SysStatus;
 
 public interface SysStatusMapper {
