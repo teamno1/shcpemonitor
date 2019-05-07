@@ -1,0 +1,15 @@
+
+/* 此两端对齐的方法适用于块元素 */
+
+#page-content #header form label{
+	display:block;text-align: justify;text-align-last:justify;-moz-text-align-last:justify;-webkit-text-align-last:justify;-ms-text-align-last:justify;
+}
+
+#page-content #header form .w1{
+	width:90px;
+}
+
+
+data-toggle="table"
+
+<th data-field="state" data-checkbox="true"></th>

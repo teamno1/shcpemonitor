@@ -1,0 +1,390 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+
+body .clearfix{
+	padding:0 3px;
+}
+
+body form{
+	margin:0px;
+}
+
+#tabd{margin-bottom:0px}
+#tabd tr{background:#f4f8fb !important;}
+#tabd tr td{font-size:14px}
+#tabd tr td input{margin-bottom:0px;}
+#tabd tbody tr td{padding:5px;vertical-align:middle;}
+
+#tab tr th{font-size:15px}
+#tab tr td{font-size:13px}
+.star{color:red;margin:2px 5px 0 0;position:relative;top:3px;}
+.table thead tr {color: #707070;font-weight: normal;
+	background: linear-gradient(to bottom, #F8F8F8 0px, #ECECEC 100%) repeat-x scroll 0% 0% #F2F2F2;}
+.table-display td{width:25%;}
+
+#table .check{margin-right: 10px;}
+#tab tbody tr td{padding:1px;vertical-align:middle;}
+#tab thead tr th{padding:3px;vertical-align:middle;}
+#treeTable tbody tr td{padding:1px;vertical-align:middle;}
+#treeTable thead tr th{padding:3px;vertical-align:middle;}
+#_Draghandle_0 #_ButtonClose_0{width:25px;top:4px;background-position: -2px 1px;}
+#_Draghandle_0 #_ButtonClose_0:hover{border:1px solid rgb(255, 255, 180);}
+/* .fill{padding-left:0px;margin:2px 10px 0 -10px;} */
+#custForm .control-label{padding-top:3px;}
+#custForm .next{margin-left:15px;}
+/* #page-content #userForm .row-fluid{margin-right:0;margin-left:0;} */
+#roleForm .row-fluid{margin-right:0;} 
+#listForm .row-fluid{margin-right:0;} 
+
+#userForm .row-fluid i{margin-right:5px;}
+#custForm .nextd{margin: 30px 0 0 7px; padding: 0 280px;}
+
+
+#page-content #roleForm .text{padding-right:0px;padding-top:4px;}
+
+#page-content .row-fluid .wave-line{margin:3px 5px 0 5px;line-height:20px;}
+#page-content{padding:0px;height:100%;position:relative;} 
+
+/*tabҳ��header��center��footer��*/
+/*tabҳ��header��*/
+#page-content form{
+	margin:0px;
+}
+.clearfix{height:inherit;}
+/* #page-content .row-fluid{width:100%;} */
+#page-content #header{
+		box-sizing:border-box;width:100%;background:url(../assets/images/gallery/corners-sprite.gif) repeat-x !important;/* min-height:32px;height:auto !important; */
+		padding:5px 0px;padding-bottom:0px;margin-bottom:5px;/* line-height:32px; */border: 1px solid #cfe2f0 !important;
+	}
+#page-content #header .row-fluid{
+	margin-bottom:5px;
+}
+#page-content .row-fluid label{
+	width:108px;text-align:right;
+}
+#page-content .detail-form .row-fluid label:first-child{
+	margin-top:4px;
+}
+#page-content .detail-form .row-fluid label{
+	width:8.5%;/* 95px */margin-left:0px;
+}
+#page-content .ele-detail-form .row-fluid label{
+	width:120px;margin-left:0px;
+}
+#page-content #header #custForm #fill a{
+		border-radius: 5px;font-size: 14px;border: 1px solid #20a0ff !important;color:#fff !important;
+		background:#20a0ff !important;
+		text-shadow:none !important;padding:2px 10px;
+	}
+#page-content #header #custForm #fill a:hover{
+		background:#4db3ff !important;
+	}
+/* #page-content #header label{
+		line-height:20px;font-size: 13px;text-align: right;padding-top: 3px;padding-right:0px;font-family:"Microsoft YaHei";
+	} */
+#page-content #header input{
+	font-family:"Microsoft YaHei";
+	/* margin-right:10px; */
+	border-radius:3px;
+}
+#page-content #header input:last-child{
+	margin-right:0px !important;
+}
+/* #page-content form{margin-bottom:0px !important;} */
+#page-content #header .input-date{background:#fff url(../assets/images/gallery/calender.png) no-repeat 90px 7px}
+#page-content #header .input-medium.input-date{background:#fff url(../assets/images/gallery/calender.png) no-repeat 153px 7px}
+#page-content #header form{
+		width:100%;background:url(../assets/images/gallery/corners-sprite.gif) repeat-x !important;margin-bottom:0px !important;
+	}
+#page-content #header #search{
+		border-radius: 3px;font-size: 14px;margin:0px 10px 0px 10px;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;
+		text-shadow:none !important;padding:0px 10px;height:24px;display:inline-block;
+	}
+#page-content #header #search:hover{
+		background:#4db3ff !important;cursor:pointer;
+	}
+/* �������ҳ�棨assign_audit_station.jsp�� */
+#page-content #up{
+		width:100%;min-height:20px;height:auto !important;margin-bottom:5px;padding:7px 0px;
+	}
+#page-content #up .btn-mini{
+		border-radius: 3px;font-size: 14px;margin:0px 10px 0px 10px;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;
+		cursor:pointer;text-shadow:none !important;padding:0px 10px;display:inline-block;height:24px;
+	}
+#page-content #tableButton{margin-top:20px;line-height:20px;text-align:center;}
+/* �������ҳ�棨assign_audit_station.jsp�� */
+/*tabҳ��center��*/
+#page-content #center{
+		box-sizing:border-box;width:100%;/* min-height:26px;height:auto !important;line-height:26px; */padding:5px 10px;background:url(../assets/images/gallery/corners-sprite.gif) repeat-x !important;margin-bottom:5px;
+		border: 1px solid #cfe2f0 !important;
+	}
+#page-content #center #btnForm{
+		width:100%;margin:0px;/* min-height:26px;height:auto !important; */background:url(../assets/images/gallery/corners-sprite.gif) repeat-x !important;
+	}
+#page-content #center #btn-left,#btn-right{
+		/* padding:0px; */
+	}
+#page-content #center #btn-left{
+	/* margin-left:0px; */
+}
+#page-content #center #btn-left a{
+		display:inline-block;border-radius: 3px;font-size: 14px;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;/*box-shadow: 1px 2px #999 !important;*/
+		text-shadow:none !important;padding:2px 10px;
+	}
+#page-content #center #btn-left a:hover{
+		background:#4db3ff !important;cursor:pointer;
+	}
+#page-content #center #btn-right a{
+		display:inline-block;float:right;border-radius: 3px;font-size: 14px;margin-left:4px;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;/*box-shadow: 1px 2px #999 !important;*/
+		text-shadow:none !important;padding:2px 10px;
+	}
+#page-content #center #btn-right a:hover{
+		background:#4db3ff !important;cursor:pointer;
+	}
+/*tabҳ��footer��*/
+#page-content #footer{overflow-y:auto;}
+#page-content #footer table{margin-bottom:0px;}
+#page-content #footer table a{cursor:pointer;}
+#page-content #footer table tr th{font-size:15px;font-weight:normal;}
+#page-content #footer table tr td{font-size:13px;}
+#page-content #footer table tbody tr td{padding:5px;vertical-align:middle;text-align:center;}
+ #page-content #footer table thead tr th{
+	padding:5px;vertical-align:middle;color:#393939;text-align:center;font-weight:normal;
+	} 
+#page-content #footer #fixed a{
+		border-radius: 3px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;/*box-shadow: 1px 2px #999 !important;*/
+		text-shadow:none !important;padding:2px 10px;cursor:pointer;
+	}
+#page-content #footer #fixed a:hover{
+		background:#4db3ff !important;
+	}
+/*Ϊ����Ӧ����������ҳ��*/
+#page-content #footerd{overflow-y:auto;}
+#page-content #footerd table{margin-bottom:0px;}
+#page-content #footerd table a{cursor:pointer;}
+#page-content #footerd table tr th{font-size:15px;font-weight:normal;text-align:center;}
+#page-content #footerd table tr td{font-size:13px;}
+#page-content #footerd table tbody tr td{padding:5px;vertical-align:middle;text-align:center;}
+#page-content #footer table thead tr th{
+	padding:8px;vertical-align:middle;color:#393939;text-align:center;font-weight:normal;
+	} 
+#page-content #footerd #fixed a{
+		border-radius: 3px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;/*box-shadow: 1px 2px #999 !important;*/
+		text-shadow:none !important;padding:2px 10px;cursor:pointer;
+	}
+#page-content #footerd #fixed a:hover{
+		background:#4db3ff !important;
+	}
+#page-content #tableButton #fixed a{
+		border-radius: 3px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;/*box-shadow: 1px 2px #999 !important;*/
+		text-shadow:none !important;padding:2px 10px;cursor:pointer;
+	}
+#page-content #tableButton #fixed a:hover{
+		background:#4db3ff !important;
+	}
+#submit{
+		border-radius: 4px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+		background:#20a0ff !important;color:#fff !important;/*box-shadow: 1px 2px #999 !important;*/
+		text-shadow:none !important;padding:1px 10px;
+	}
+#submit:hover{
+		background:#4db3ff !important;
+	}
+
+/* 角色管理页面 */
+#rig-table{
+	width:39.5%;
+	float:right;
+}
+
+#zhongxind{
+	height:88%;
+	overflow-y:auto;
+	overflow-x:hidden;
+	border:1px solid #ddd;
+	margin-bottom:10px;
+}
+
+#fillBtn{
+	border-radius: 3px;
+	font-size: 14px;
+	text-align:center;
+	border: 1px solid #20a0ff !important;
+	background:#20a0ff !important;
+	color:#fff !important;
+	text-shadow:none !important;
+	padding:2px 10px;
+}
+
+#fillBtn:hover{
+	background:#4db3ff !important;
+}
+
+/* ֽƱ����Ʊ�ݹ�������ҳ�鿴���ܵ�����dialogҳ�� */
+#tab1,#tab2{
+	width:900px;margin:0px;
+}
+#tab1,#tab2 tbody tr td{font-size:13px;}
+#tab2{margin-top:-1px;}
+#tab2 .center{
+	text-align:center;
+}
+#tab1 .line{
+	width:60px;vertical-align: middle;text-align: center;padding:5px 0px;
+} 
+ #tab1 .wid{
+	width:73px;vertical-align: middle;text-align: left;padding:5px 5px;
+} 
+#tab1 .lenwid{
+	width:306px;vertical-align: middle;text-align: left;padding:5px 5px;
+} 
+#tab1 .lenwids{
+	width:349px;vertical-align: middle;text-align: left;padding:5px 5px;
+}
+/* ��ҳ��ʽ���� */
+#page-content .pagination{margin:0px;float: right;padding-top: 0px;position:fixed;right:0px;bottom:10px;}
+#page form{margin-bottom:0px;}
+
+/*新增，修改弹出页面 */
+#jump-content{
+	padding:10px;
+	background:#f4f8fb;
+}
+
+#jumpConTab{
+	margin-bottom:30px;
+}
+
+#jumpConTab td{
+	border:none;
+	padding:5px;
+}
+
+#jumpConTab td:nth-child(2n+1){
+	text-align:right;
+}
+
+#jump-content #jumpConTab td label{
+	margin-bottom:0px;
+}
+
+#jump-content #jumpConTab td .input-medium{
+	width:163px;
+}
+
+#jump-content .row-fluid{
+	margin-bottom:10px;
+}
+
+#jump-content .row-fluid label{
+	width:125px;
+}
+
+#jump-content .row-fluid fieldset label{
+	width:20%;
+}
+
+#jump-content .marTop30{
+	margin-top:30px;
+}
+
+#jump-content .save{
+	text-align:center;
+	line-height:28px;
+	margin-top:20px;
+}
+
+#jump-content .row-fluid .cbrate{
+	margin-left:-2px;
+}
+
+#jump-content .row-fluid .input-date{
+	background:#fff url(../assets/images/gallery/calender.png) no-repeat 153px 7px
+}
+
+#tabd .input-date{
+	background:#fff url(../assets/images/gallery/calender.png) no-repeat 153px 7px
+}
+
+#jump-content .field{
+	border:1px solid #ddd;border-radius:4px;padding:0 10px;margin-bottom:10px;
+}
+
+#jump-content  .pdTop{
+	padding-top:3px;text-align:right;
+}
+
+#jump-content .percent{
+	width:105px !important;
+}
+
+#jump-content #userForm .buyer,.saler{
+	display:none;
+}
+
+.save .in{
+	margin-right:10px;
+}
+
+/*弹出页面按钮*/	
+#jump-content .center a{
+	border-radius: 3px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+	background:#20a0ff !important;color:#fff !important;
+	text-shadow:none !important;padding:3px 10px;
+}	
+#jump-content .center a:hover{
+	background:#4db3ff !important;cursor:pointer;
+}
+
+
+
+
+
+
+#Pager{
+	border-radius: 4px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+	background:#20a0ff !important;color:#fff !important;
+	text-shadow:none !important;padding:1px 10px;
+}	
+#Pager:hover{
+	background:#4db3ff !important;cursor:pointer;
+}
+/* ֽƱ����Ʊ�����֣�ת�룬ת���в�ѯ�����ʽ(һ���ĸ��ı���) */
+#page-content #header .row-fluid .batch{
+	margin-top:4px;width:177px;line-height:20px;padding-left:8px;
+}
+/* ���У���ҵ�жһ�Ʊ��ť��ʽ */
+#Form #bank a,#savePage{border-radius: 3px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+background:#20a0ff !important;color:#fff !important;
+text-shadow:none !important;padding:2px 10px;margin-left:5px;}
+#Form #bank a:hover{background:#4db3ff !important;}
+/* �����ڵĵ���ҳ�汣�水ť���� */	
+#Form #bank #savePage:hover{background:#4db3ff !important;}	
+/* Ʊ�ݹ���ҳ�鿴��������ҳ��ť��ʽ */
+#tab2 .center a{border-radius: 4px;font-size: 14px;text-align:center;border: 1px solid #20a0ff !important;
+background:#20a0ff !important;color:#fff !important;
+text-shadow:none !important;padding:1px 10px;}
+#tab2 .center a:hover{background:#4db3ff !important;}	
+
+/* tips��ʾ */
+.jq_tips_info{
+	line-height:20px;
+}
+/* ���ѡ������ */
+#select-Info{
+	height:18px;margin:20px 20px 0 0;font-size:14px;line-height:20px;
+}
+
+
+
+
+

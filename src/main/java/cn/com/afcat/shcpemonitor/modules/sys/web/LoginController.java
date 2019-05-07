@@ -18,10 +18,18 @@ public class LoginController {
     @Autowired
     TradeInfoMapper mapper;
 
+    @RequestMapping("/")
+    public String index(){
+        System.out.println("=================");
+        return "index";
+        //return "webpage/system/admin/login2";
+    }
+
+
     @RequestMapping(value = "login", method = RequestMethod.GET)
     public String login(HttpServletRequest request, HttpServletResponse response, Model model) {
         TradeInfo  tt=mapper.selectByPrimaryKey(1L);
-        System.out.println(tt==null? "1":tt.getBrchName());
-            return null;
+        System.out.println(tt==null? "1":tt.getBrchNo());
+        return "login";
     }
 }

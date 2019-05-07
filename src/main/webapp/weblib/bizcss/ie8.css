@@ -1,0 +1,91 @@
+body{font-family:"΢���ź�","Microsoft YaHei";}
+a,input,button{font-family:"΢���ź�","Microsoft YaHei";}
+#jump-content label{font-family:"΢���ź�","Microsoft YaHei";}
+#page-content label{font-family:"΢���ź�","Microsoft YaHei";}
+/* tab���⹤��̨ */
+#jerichotab_0 .tab_left div:first-child{
+	font-family:"Microsoft YaHei";text-align:center;padding-left:10px;line-height:29px;text-indent:6px;width:75px;font-size:15px;
+}
+/* header����ͼ*/
+#page-content #header{
+	background:url(../assets/images/gallery/corners-sprite.gif) repeat-x top left !important;/* min-height:40px;height:auto !important;padding:6px 0 3px 0;;margin-bottom:3px; */
+	border: 1px solid #cfe2f0 !important;
+}
+/* ������� */
+#sidebar #search_form #search_notice{
+	display:none;width:157px!important;margin:-1px 0 0 0px!important;
+}
+/* ��¼��ť*/
+#loginbox #form-actions a{
+		background:url(../assets/images/gallery/navbg.jpg) repeat-x !important;
+		position:relative; z-index:9999; border-radius:5px 0px 0px 5px !important;behavior: url(ie-css3.htc);
+}
+#loginbox #form-actions a:hover{
+		background:url(../assets/images/gallery/tab4.jpg) repeat-x !important; text-decoration:none;cursor:pointer;
+}
+.bg_lg{ 
+	background:url(../assets/images/gallery/navbg.jpg) repeat-x !important;position:relative; z-index:9999; border-radius:5px 0px 0px 5px !important;behavior: url(ie-css3.htc);
+}
+/* ��񲿷� */
+.fixed-table-container .fixed-table-bg{
+	background:rgb(240, 240, 248);
+}
+.fixed-table-container .fixed-table-header{
+	margin-right:20px;
+}
+/* main.jsp�Ĳ��ֿ�� */
+.welcom_dcl ul {
+	width:47.5% !important;
+}
+
+/* 工作台菜单 */
+.welcome_main{
+	background:#f7fbff !important;
+}
+/* �ײ���ҳ */
+.bottomPage{
+	top:0px !important;line-height:35px !important;
+}
+/* ������ҳ����� */
+#_Draghandle_0 td + td div{
+	width:100px;
+}
+#_Draghandle_0 td + td div img{
+	float:left;
+}
+#_Draghandle_0 td + td div span{
+	float:left;
+}
+/* Ʊ������ҳһ���ĸ�����ʾ */
+#page-content .detail-form .row-fluid label{
+	width:8.4%;/* 93px */
+}
+#page-content #header .row-fluid .batch{
+	width:177px;
+}
+
+.star{
+	margin:0;
+}
+/* fieldset��ǩ */
+#jump-content .field{
+	border:none;
+}
+/* jbox��ť */
+div.jbox .jbox-button{
+	border:none;
+}
+/* jbox���� */
+#tagSelectSearch{
+	background:url(weblib/assets/images/gallery/navbg.jpg) repeat-x !important;border:none!important;padding:5px 4px!important;
+	margin-left:-4px!important;color:#fff!important;font-size:14px!important;
+}
+/* ��Ʊϵͳ��ϸ��Ϣ�鿴ҳ��(���汳����Ϣ) */
+#ele-img{
+	height:40px;margin-left:50px;
+}
+
+/* 用户管理弹出页面 */
+#jumpConTab td:first-child,
+#jumpConTab td:first-child + td + td
+{text-align:right;}
