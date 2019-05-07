@@ -6,51 +6,62 @@
 <title sec:authentication="name"></title>
 <link rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
 <style type="text/css">
-body {
-  padding-top: 50px;
-}
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
-}
 </style>
 </head>
-<body>
-	 <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">hello</a>
+<body style="font-family:'微软雅黑';min-width:1250px;" id="indexBody">
+<div id="home">
+    <div class="navbar navbar-default" id="navbar">
+        <div id="navbar-container">
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <i class="icon-leaf"></i>
+                    票交所模拟器
+                </a>
+            </div>
+            <div class="navbar-header pull-right" role="navigation" id="navbarHeader">
+                <ul class="nav ace-nav">
+                    <li class="white">
+							<span class="pull-left" id="note">
+								欢迎您,李桃 (机构名称)
+							<i class="icon-time"></i>
+								当前日期
+							</span>
+                    </li>
+                    <li class="" title="修改密码">
+                        <a  onclick="modifyPwd('${user.userId}');" class="bgColor">
+                            <i class="icon-edit"></i>
+                            修改密码
+                        </a>
+                    </li>
+                    <li class="" title="退出">
+                        <a href="loginController.do?method=logout" class="bgColor">
+                            <i class="icon-off"></i>
+                            注销
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-           <li><a th:href="@{/}"> 首页 </a></li>
-              <li><a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/admin}"> admin </a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-    
-    
-     <div class="container">
-
-      <div class="starter-template">
-      	<h1 th:text="${msg.memberNo}"></h1>
-		
-		<p class="bg-primary" th:text="${msg.memberName}"></p>
-		
-		<div sec:authorize="hasRole('ROLE_HOME')">
-		 	<p class="bg-info" th:text="${msg.brchNo}"></p>
-		</div>
-          <div sec:authorize="hasRole('ROLE_ADMIN')">
-              <p class="bg-info">恭喜您,您有 ROLE_ADMIN 权限 </p>
-          </div>
-
-          <form th:action="@{/logout}" method="post">
-            <input type="submit" class="btn btn-primary" value="注销"/>
-        </form>
-      </div>
-
     </div>
+    <div class="main-container ace-save-state" id="main-container">
+        <div class="sidebar responsive ace-save-state" id="sidebar">
+            <ul class="nav nav-list" id="nav-menu">
+                <li class="actived gray"  id="menuid_1" title="核心交易">
+                <a class="dropdown-toggle first_child firstLevelNav">
+                    <b class="arrow icon-angle-down"></b>
+                    <i ></i> 核心交易</a></li>
+            </ul>
+        </div>
+        <div id="sidebar-collapsed">
+            <i class="icon-backward" id="imgs"></i>
+        </div>
+        <div class="main-content" id="mainContent">
+            <div id="parentFrame" >
+                <iframe name="mainFrame" id="mainFrame" frameborder="0" src="loginController.do?method=tab"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
     
 	
 </body>

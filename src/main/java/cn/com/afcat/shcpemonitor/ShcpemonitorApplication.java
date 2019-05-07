@@ -1,4 +1,4 @@
-package cn.com.afcat.shcpemonitor.modules.sys;
+package cn.com.afcat.shcpemonitor;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
