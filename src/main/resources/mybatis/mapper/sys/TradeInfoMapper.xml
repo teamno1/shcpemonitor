@@ -14,17 +14,17 @@
   <sql id="Base_Column_List" >
     ID, MEMBER_NO, MEMBER_NAME, BRCH_NO, BRCH_NAME, TRADE_USER_NO, TRADE_USER_NAME, SETTLE_ACCOUNT_NO
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="Long" >
     select 
     <include refid="Base_Column_List" />
     from TRADE_INFO
     where ID = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="deleteByPrimaryKey" parameterType="Long" >
     delete from TRADE_INFO
     where ID = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+  <insert id="insert" parameterType="TradeInfo" >
     insert into TRADE_INFO (ID, MEMBER_NO, MEMBER_NAME, 
       BRCH_NO, BRCH_NAME, TRADE_USER_NO, 
       TRADE_USER_NAME, SETTLE_ACCOUNT_NO)
@@ -32,7 +32,7 @@
       #{brchNo,jdbcType=VARCHAR}, #{brchName,jdbcType=VARCHAR}, #{tradeUserNo,jdbcType=VARCHAR}, 
       #{tradeUserName,jdbcType=VARCHAR}, #{settleAccountNo,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+  <insert id="insertSelective" parameterType="TradeInfo" >
     insert into TRADE_INFO
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -87,7 +87,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+  <update id="updateByPrimaryKeySelective" parameterType="TradeInfo" >
     update TRADE_INFO
     <set >
       <if test="memberNo != null" >
@@ -114,7 +114,7 @@
     </set>
     where ID = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo" >
+  <update id="updateByPrimaryKey" parameterType="TradeInfo" >
     update TRADE_INFO
     set MEMBER_NO = #{memberNo,jdbcType=VARCHAR},
       MEMBER_NAME = #{memberName,jdbcType=VARCHAR},
@@ -125,4 +125,11 @@
       SETTLE_ACCOUNT_NO = #{settleAccountNo,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=BIGINT}
   </update>
+
+
+  <select id="queryTradeList" resultType="TradeInfo">
+    select
+    <include refid="Base_Column_List" />
+    from TRADE_INFO
+  </select>
 </mapper>
