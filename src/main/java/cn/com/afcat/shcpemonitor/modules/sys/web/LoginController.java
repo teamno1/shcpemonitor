@@ -15,7 +15,7 @@ public class LoginController {
     @RequestMapping("/")
     public String index(Model model){
         System.out.println("=================");
-        return "login";
+        return "1-1P22G11331/login";
     }
 
     @RequestMapping("/login")
@@ -26,6 +26,6 @@ public class LoginController {
         page=service.queryTradeInfo(page);
         System.out.println(page.getList().size());
         model.addAttribute("msg",user);
-        return "home";
+        return "1-1P22G11331/index1";
     }
 }
