@@ -1,6 +1,6 @@
 package cn.com.afcat.shcpemonitor.modules.sys.dao;
 
-import cn.com.afcat.shcpemonitor.common.persistence.Page;
+import cn.com.afcat.shcpemonitor.common.db.Page;
 import cn.com.afcat.shcpemonitor.modules.sys.entity.TradeInfo;
 
 import java.util.List;

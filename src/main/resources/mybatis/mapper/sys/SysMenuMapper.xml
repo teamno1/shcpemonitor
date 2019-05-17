@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.com.afcat.shcpemonitor.modules.sys.dao.SysMenuMapper" >
+  <resultMap id="BaseResultMap" type="Menu" >
+    <id column="menu_code" property="menuCode" jdbcType="VARCHAR" />
+    <result column="menu_name" property="menuName" jdbcType="VARCHAR" />
+    <result column="menu_url" property="menuUrl" jdbcType="VARCHAR" />
+    <result column="menu_type" property="menuType" jdbcType="CHAR" />
+    <result column="menu_level" property="menuLevel" jdbcType="VARCHAR" />
+    <result column="menu_icon" property="menuIcon" jdbcType="VARCHAR" />
+    <result column="order_no" property="orderNo" jdbcType="INTEGER" />
+    <result column="parent_menu_code" property="parentMenuCode" jdbcType="VARCHAR" />
+    <result column="open_flag" property="openFlag" jdbcType="VARCHAR" />
+    <result column="tree_idx" property="treeIdx" jdbcType="VARCHAR" />
+    <result column="logon_flag" property="logonFlag" jdbcType="CHAR" />
+    <result column="icon_display" property="iconDisplay" jdbcType="CHAR" />
+    <result column="menu_class" property="menuClass" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    menu_code, menu_name, menu_url, menu_type, menu_level, menu_icon, order_no, parent_menu_code,
+    open_flag, tree_idx, logon_flag, icon_display, menu_class, remark
+  </sql>
+
+  <select id="queryMenuList" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tmenu
+  </select>
+</mapper>

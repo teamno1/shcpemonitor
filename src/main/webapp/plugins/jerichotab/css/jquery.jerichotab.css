@@ -1,0 +1,63 @@
+/*-------jericho tab-------------------*/
+.jericho_tab {width:100%;}
+body{font-family:'΢���ź�';
+}
+/*-------jericho tabpages-------------------*/
+.jericho_tab .tab_pages {width:100%;float:left;clear:both;border-bottom: 1px solid #ccc;}
+.jericho_tab .tab_pages .tabs {height:29px;overflow :hidden;display:block;position:relative;float:left;width:96.5%;}
+.jericho_tab .tab_pages div {float:left;}
+/*-------jericho each tab -------------------*/
+.jericho_tab .tab_pages ul, .jericho_tab .tab_pages li {margin:0;padding:0;list-style-type:none;}
+.jericho_tab .tab_pages ul {position:relative;display:block;}
+.jericho_tab .tab_pages ul li  {float:left;/*margin-right:2px;*/}
+.jericho_tab .tab_pages .jericho_tabs {width:150px;}
+.jericho_tab .tab_pages .tab_unselect div {height:24px;line-height:24px;}
+.jericho_tab .tab_pages .tab_selected div {height:27px;line-height:30px;}
+.jericho_tab .tab_pages .jericho_tabs div.tab_left {width:145px;
+border-radius: 5px 5px 0px 0px;
+/* border-left: 1px solid #7dc0db;
+border-top: 1px solid #7dc0db; */
+height: 30px;}
+.jericho_tab .tab_pages .jericho_tabs div.tab_right {width:6px;/* border-right: 1px solid #7dc0db;
+border-top: 1px solid #7dc0db; */border-radius: 0px 5px 0px 0px;
+height: 30px;}
+#myJerichoTab .tab_pages .tab_unselect .tab_left{background:url(../images/tab2.jpg) repeat-x;} 
+#myJerichoTab .tab_pages .tab_unselect .tab_right{background: url(../images/tab2.jpg) repeat-x;} 
+ #myJerichoTab .tab_pages .tab_selected .tab_left,.tab_right{background: url(../images/navbg.jpg) repeat-x;}
+.jericho_tab .tab_pages .tab_unselect, .jericho_tab .tab_pages .tab_selected {cursor:pointer;}
+/* .jericho_tab .tab_pages .tab_unselect .tab_left {margin-top:0px;background:url(../images/jerichotab1.gif) no-repeat left 0px;}
+.jericho_tab .tab_pages .tab_unselect .tab_right {margin-top:0px;background:url(../images/jerichotab1.gif) no-repeat right -30px;}
+.jericho_tab .tab_pages .tab_unselect_h .tab_left {margin-top:0px;background:url(../images/jerichotab1.gif) no-repeat left -104px;}
+.jericho_tab .tab_pages .tab_unselect_h .tab_right {margin-top:0px;background:url(../images/jerichotab1.gif) no-repeat right -128px;} */
+/*.jericho_tab .tab_pages . tab_selected div.tab_left {background:url(../images/jerichotab.gif) no-repeat left -48px;}
+.jericho_tab .tab_pages .tab_selected div.tab_right {background:url(../images/jerichotab.gif) no-repeat right -76px;} */
+/*-------jericho tab inner -------------------*/
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_icon {width:25px;text-align:right;background-repeat:no-repeat;}
+.jericho_tab .tab_pages .tab_selected .tab_left .tab_icon {background-position:right 7px;}
+.jericho_tab .tab_pages .tab_unselect .tab_left .tab_icon {background-position:right center;}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_text {font-family:"Microsoft YaHei";line-height:29px;text-align:center;width:75px;font-size:15px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+#jerichotab_0 .tab_left div:first-child{font-family:"Microsoft YaHei";text-align:center;padding-left:10px;line-height:29px;text-indent:6px;width:75px;font-size:15px;}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_close {/*width:20px;*/text-align:center;}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_close a {width:11px;height:11px;display:block;overflow:hidden;text-decoration:none;}
+.jericho_tab .tab_pages .tab_selected .tab_left .tab_close a {background:url(../images/jerichoclose.gif) center -11px no-repeat;margin-top:8px;}
+.jericho_tab .tab_pages .tab_unselect .tab_left .tab_close a {background:url(../images/jerichoclose.gif) center 0 no-repeat;margin-top:8px;}
+.jericho_tab .tab_pages .jericho_tabs .tab_left .tab_close a:hover {background:url(../images/jerichoclose.gif) center -22px no-repeat;}
+/*-------jericho tab slider -------------------*/
+.jericho_tab .tab_pages .jericho_sliders {width:19px;height:29px;margin:0;margin-top:0px;cursor:pointer;float:left;}
+.jericho_tab .tab_pages .jericho_sliderleft_enable {background:url(../images/jerichoslider1.png) 0 0 no-repeat;}
+.jericho_tab .tab_pages .jericho_sliderleft_hover {background:url(../images/jerichoslider1.png) 0 -30px no-repeat;}
+.jericho_tab .tab_pages .jericho_sliderleft_disable {background:url(../images/jerichoslider1.png) 0 -62px no-repeat;}
+
+.jericho_tab .tab_pages .jericho_sliderright_enable {background:url(../images/jerichoslider1.png) -32px 0 no-repeat;}
+.jericho_tab .tab_pages .jericho_sliderright_hover {background:url(../images/jerichoslider1.png) -32px -31px no-repeat;}
+.jericho_tab .tab_pages .jericho_sliderright_disable {background:url(../images/jerichoslider1.png) -32px -62px no-repeat;}
+/*-------jericho tab content -------------------*/
+.jericho_tab .tab_content {/*border:solid 1px #98A9B9;border-top:solid 1px #CEDDFA;*/float:left;clear:both;width:100%;/* background-color:#fff; */padding-top:7px;}
+.jericho_tab .tab_content div.content {/*padding:10px;*/position:relative;overflow:hidden;display:block;}
+.jericho_tab .tab_content div.content .righttag {position:absolute;top:5px;right:10px;width:80px;height:20px;line-height:20px;background:#f8f8f8 url(../images/smallloader.gif) no-repeat 8px center;border:1px solid #ddd;padding-left:30px;font-size:11px;color:#888;z-index:9999;}
+.jericho_tab .tab_content div.loading {background:url(../images/jerichoload.gif) no-repeat center 30%;}
+/*-------right menu -------------------*/
+.div_RightMenu{position:absolute; list-style:none;width:90px;} .div_RightMenu div{background:#ddd;position:relative;}
+.div_RightMenu ul{position:relative;background:#fff;border:1px solid #999;left:-2px;top:-2px; margin:0; padding:1px 0;}
+.div_RightMenu ul li{list-style:none;padding:1px 8px;line-height:20px;height:20px;cursor:pointer;text-align:center;font-size:15px;color:#333;}
+.div_RightMenu ul li.RM_mouseover{background-color:#f5f5f5;}
