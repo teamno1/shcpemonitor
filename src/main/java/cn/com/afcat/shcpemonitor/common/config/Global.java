@@ -80,6 +80,40 @@ public class Global {
 		return value;
 	}
 
+	public static String getConfig(String key,String defaultVal) {
+		String value = map.get(key);
+		if (value == null) {
+			value = loader.getProperty(key);
+			if(value == null)
+				value=defaultVal;
+			map.put(key, value);
+		}
+		return value;
+	}
+
+	/**
+	 * 获取配置
+	 *
+	 */
+	public static Integer getIntegerConfig(String key) {
+		String value = map.get(key);
+		if (value == null) {
+			value = loader.getProperty(key);
+			map.put(key, value != null ? value : "0");
+		}
+		return Integer.valueOf(value);
+	}
+
+	public static Integer getIntegerConfig(String key,int defaultVal) {
+		String value = map.get(key);
+		if (value == null) {
+			value = loader.getProperty(key);
+			if(value== null)
+				value=defaultVal+"";
+			map.put(key, value);
+		}
+		return Integer.valueOf(value);
+	}
 
 	/**
 	 * 页面获取常量
