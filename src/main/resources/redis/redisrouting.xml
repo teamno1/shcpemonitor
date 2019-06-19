@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redisrouting>	
+	<!-- redis节点配置开始 -->
+	<clusternode>
+		<cnode>
+			<id>MainBackupRedis</id>
+			<!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+			<writerstrategy>MUTIWRITE</writerstrategy>
+			<!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+			<readstrategy>HASHREAD</readstrategy>
+			<readservernodes>snode1</readservernodes>
+			<writeservernodes>snode1</writeservernodes>
+		</cnode>
+<!-- 		<cnode> -->
+<!-- 			<id>CloudCartMainBackupRedis</id> -->
+			<!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<writerstrategy>MUTIWRITE</writerstrategy> -->
+			<!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<readstrategy>HASHREAD</readstrategy> -->
+<!-- 			<readservernodes>snode2</readservernodes> -->
+<!-- 			<writeservernodes>snode2</writeservernodes> -->
+<!-- 		</cnode> -->
+<!-- 		<cnode> -->
+<!-- 			<id>InventoryMainBackupRedis</id> -->
+			<!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<writerstrategy>MUTIWRITE</writerstrategy> -->
+			<!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<readstrategy>HASHREAD</readstrategy> -->
+<!-- 			<readservernodes>snode3</readservernodes> -->
+<!-- 			<writeservernodes>snode3</writeservernodes> -->
+<!-- 		</cnode> -->
+<!-- 		<cnode> -->
+<!-- 			<id>productInventoryRedis</id> -->
+			<!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<writerstrategy>MUTIWRITE</writerstrategy> -->
+			<!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<readstrategy>HASHREAD</readstrategy> -->
+<!-- 			<readservernodes>snode5</readservernodes> -->
+<!-- 			<writeservernodes>snode5</writeservernodes> -->
+<!-- 		</cnode> -->
+<!-- 		<cnode> -->
+<!-- 			<id>auctionMainBackupRedis</id> -->
+			<!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<writerstrategy>MUTIWRITE</writerstrategy> -->
+			<!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<readstrategy>HASHREAD</readstrategy> -->
+<!-- 			<readservernodes>auctionNode</readservernodes> -->
+<!-- 			<writeservernodes>auctionNode</writeservernodes> -->
+<!-- 		</cnode> -->
+<!-- 		<cnode> -->
+<!-- 			<id>registTicket</id> -->
+			<!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<writerstrategy>MUTIWRITE</writerstrategy> -->
+			<!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<readstrategy>HASHREAD</readstrategy> -->
+<!-- 			<readservernodes>snode7</readservernodes> -->
+<!-- 			<writeservernodes>snode7</writeservernodes> -->
+<!-- 		</cnode> -->
+<!-- 		<cnode> -->
+<!-- 			<id>frontServerRedis</id> -->
+			<!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<writerstrategy>MUTIWRITE</writerstrategy> -->
+			<!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!-- 			<readstrategy>HASHREAD</readstrategy> -->
+<!-- 			<readservernodes>snode8</readservernodes> -->
+<!-- 			<writeservernodes>snode8</writeservernodes> -->
+<!-- 		</cnode> -->
+<!-- 		<cnode> -->
+<!--             <id>AuctionSyncRedis</id> -->
+            <!-- Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!--             <writerstrategy>MUTIWRITE</writerstrategy> -->
+            <!-- 负载均衡 策略，最小连接数MINCONNECT、最高性能MAXPERFORMANCE、Hash写 HASHWRITE，尾号写 NUMBERWRITE -->
+<!--             <readstrategy>HASHREAD</readstrategy> -->
+<!--             <readservernodes>snode4</readservernodes> -->
+<!--             <writeservernodes>snode4</writeservernodes> -->
+<!--         </cnode> -->
+<!-- 		<cnode> -->
+<!-- 		    <id>accountTicketRedis</id> -->
+<!-- 		    <writerstrategy>HASHWRITE</writerstrategy> -->
+<!-- 		    <readstrategy>HASHREAD</readstrategy> -->
+<!-- 		    <readservernodes>snode1:snode3</readservernodes> -->
+<!-- 		    <writeservernodes>snode1:snode3</writeservernodes> -->
+<!-- 		</cnode> -->
+<!-- 		<cnode> -->
+<!-- 		    <id>RoutingCommentRedis</id> -->
+<!-- 		    <writerstrategy>HASHWRITE</writerstrategy> -->
+<!-- 		    <readstrategy>HASHREAD</readstrategy> -->
+<!-- 		    <readservernodes>snode1:snode3</readservernodes> -->
+<!-- 		    <writeservernodes>snode1:snode3</writeservernodes> -->
+<!-- 		</cnode> -->
+	</clusternode>
+	<servernode>
+		<node>
+			<id>snode1</id>
+			<!-- 最大的活动连接 -->
+			<maxActive>20</maxActive>
+			<!-- 最大的空闲连接 -->
+			<maxIdle>10</maxIdle>
+			<!-- 最大的等待时间 -->
+			<maxWait>1000</maxWait>
+			<!--Ip地址和端口 -->
+			<host>127.0.0.1</host>
+			<port>6379</port>
+		</node>
+<!-- 		<node> -->
+<!-- 			<id>snode2</id> -->
+			<!-- 最大的活动连接 -->
+<!-- 			<maxActive>300</maxActive> -->
+			<!-- 最大的空闲连接 -->
+<!-- 			<maxIdle>100</maxIdle> -->
+			<!-- 最大的等待时间 -->
+<!-- 			<maxWait>1000</maxWait> -->
+			<!--Ip地址和端口 -->
+			<!-- 10.185.240.131 -->
+<!-- 			<host>cloudCartMainBackupRedis.secoolocal.com</host> -->
+<!-- 			<port>6379</port> -->
+<!-- 		</node> -->
+<!-- 		<node> -->
+<!-- 			<id>snode3</id> -->
+			<!-- 最大的活动连接 -->
+<!-- 			<maxActive>300</maxActive> -->
+			<!-- 最大的空闲连接 -->
+<!-- 			<maxIdle>100</maxIdle> -->
+			<!-- 最大的等待时间 -->
+<!-- 			<maxWait>1000</maxWait> -->
+			<!--Ip地址和端口 -->
+			<!-- 10.185.240.131 -->
+<!-- 			<host>inventoryMainBackupRedis.secoolocal.com</host> -->
+<!-- 			<port>6679</port> -->
+<!-- 		</node> -->
+<!-- 		<node> -->
+<!--             <id>snode4</id> -->
+            <!-- 最大的活动连接 -->
+<!--             <maxActive>300</maxActive> -->
+            <!-- 最大的空闲连接 -->
+<!--             <maxIdle>100</maxIdle> -->
+            <!-- 最大的等待时间 -->
+<!--             <maxWait>1000</maxWait> -->
+            <!--Ip地址和端口 -->
+<!--             <host>auctionMainBackupRedis.secoolocal.com</host> -->
+<!--             <port>6679</port> -->
+<!--         </node> -->
+<!-- 		<node> -->
+<!-- 			<id>snode5</id> -->
+			<!-- 最大的活动连接 -->
+<!-- 			<maxActive>300</maxActive> -->
+			<!-- 最大的空闲连接 -->
+<!-- 			<maxIdle>100</maxIdle> -->
+			<!-- 最大的等待时间 -->
+<!-- 			<maxWait>1000</maxWait> -->
+			<!--Ip地址和端口 -->
+<!-- 			<host>inventoryFrontEnd.secoolocal.com</host> -->
+<!-- 			<port>6679</port> -->
+<!-- 		</node> -->
+<!-- 		<node> -->
+<!-- 			<id>snode7</id> -->
+			<!-- 最大的活动连接 -->
+<!-- 			<maxActive>1000</maxActive> -->
+			<!-- 最大的空闲连接 -->
+<!-- 			<maxIdle>100</maxIdle> -->
+			<!-- 最大的等待时间 -->
+<!-- 			<maxWait>1000</maxWait> -->
+			<!--Ip地址和端口 -->
+			<!-- 10.185.240.131 -->
+<!-- 			<host>registTicket.secoolocal.com</host> -->
+<!-- 			<port>6379</port> -->
+<!-- 		</node> -->
+<!-- 		<node> -->
+<!-- 			<id>auctionNode</id> -->
+			<!-- 最大的活动连接 -->
+<!-- 			<maxActive>1000</maxActive> -->
+			<!-- 最大的空闲连接 -->
+<!-- 			<maxIdle>100</maxIdle> -->
+			<!-- 最大的等待时间 -->
+<!-- 			<maxWait>1000</maxWait> -->
+			<!--Ip地址和端口 -->
+			<!-- 10.185.240.131 -->
+<!-- 			<host>auctionMainBackupRedis.secoolocal.com</host> -->
+<!-- 			<port>6679</port> -->
+<!-- 		</node> -->
+<!-- 		<node> -->
+<!-- 			<id>snode8</id> -->
+			<!-- 最大的活动连接 -->
+<!-- 			<maxActive>1000</maxActive> -->
+			<!-- 最大的空闲连接 -->
+<!-- 			<maxIdle>100</maxIdle> -->
+			<!-- 最大的等待时间 -->
+<!-- 			<maxWait>1000</maxWait> -->
+			<!--Ip地址和端口 -->
+			<!-- <host>172.16.0.39</host> -->
+<!-- 			<host>frontServerRedis.secoolocal.com</host> -->
+<!-- 			<port>6979</port> -->
+<!-- 		</node> -->
+	</servernode>
+	<!-- redis节点 配置结束 -->
+</redisrouting>

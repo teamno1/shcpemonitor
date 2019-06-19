@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redis>	
+	<app>
+		<id>redis_cache</id>
+		<!--集群策略  ROUTING和SHARD -->
+		<dispatch>SHARD</dispatch>
+		<!-- 当时dispatch为cluster时 需要配置路由策略 先支持 ONLY  HASH
+		  	  当dispatch为SHARD时 只支持ONLY策略 -->
+		<clusterStrategy>ONLY</clusterStrategy>
+		
+		<!-- 		对应redisrouting.xml或shardconfig.xml的ID -->
+<!-- 		<clusterIds>MainBackupRedis</clusterIds> -->
+		<clusterIds>ShardRedisCache</clusterIds>
+	</app>
+	
+	<!-- redis节点 配置结束 -->
+</redis>

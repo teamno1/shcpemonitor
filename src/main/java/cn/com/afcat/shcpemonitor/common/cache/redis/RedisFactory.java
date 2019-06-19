@@ -1,39 +1,12 @@
-/********************************************
- * 文件名称: RedisFactory.java
- * 系统名称: 
- * 模块名称: 
- * 软件版权: 北京合融科技有限公司
- * 功能说明: 
- * 系统版本: 
- * 开发人员: lt
- * 开发时间: 2017-1-19
- * 审核人员:
- * 相关文档:
- * 修改记录: 修改日期    修改人员    修改说明
- *             .----.
- *          _.'__    `.
- *      .--(^)(^^)---/!\
- *    .' @          /!!!\
- *    :         ,    !!!!
- *     `-..__.-' _.-\!!!/
- *           `;_:    `"'
- *          .'"""""`.
- *          /,  lt ,\\
- *         // 嘿嘿嘿嘿      \\
- *         `-._______.-'
- *         ___`. | .'___
- *        (______|______)
- *********************************************/
 package cn.com.afcat.shcpemonitor.common.cache.redis;
+
+import org.apache.commons.configuration.XMLConfiguration;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.configuration.ConfigurationException;
-import org.apache.commons.configuration.XMLConfiguration;
 /**
  * 
  *
@@ -68,17 +41,17 @@ public class RedisFactory {
      */
     public IRedisOperate getRedisByAppId(String appId,String token){
         AppRedis redisApp = appRedisMap.get(appId);
-        return redisApp.getSecooRedis(token);
+        return redisApp.getRedis(token);
     }
     /**
      * 获取某个应用下的所有redis连接
-     * RedisFactory.getAllSecooRedisByAppId()<BR>
+     * RedisFactory.getAllRedisByAppId()<BR>
      * @param appId
      * @return
      */
-    public List<IRedisOperate> getAllSecooRedisByAppId(String appId){
+    public List<IRedisOperate> getAllRedisByAppId(String appId){
         AppRedis redisApp = appRedisMap.get(appId);
-        return redisApp.getAllSecooRedis();
+        return redisApp.getAllRedis();
     }
     /**
      * 初始化

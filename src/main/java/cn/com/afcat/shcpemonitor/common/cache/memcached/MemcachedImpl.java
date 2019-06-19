@@ -23,22 +23,10 @@ public class MemcachedImpl implements ICache {
                 .getMemcachedClientName());
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.hundsun.jres.interfaces.cache.BasicCache#clear()
-     */
     public void clear() {
         mcc.clear();
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.hundsun.jres.interfaces.cache.BasicCache#containsKey(java.lang.Object
-     * )
-     */
     public boolean containsKey(Object key) {
         return mcc.containsKey(getSpaceKey((String) key));
     }
@@ -55,11 +43,7 @@ public class MemcachedImpl implements ICache {
         return values.contains(value);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.hundsun.jres.interfaces.cache.BasicCache#get(java.lang.Object)
-     */
+
     public Object get(Object key) {
         Object object = mcc.get(getSpaceKey((String) key));
         return object;
@@ -83,22 +67,10 @@ public class MemcachedImpl implements ICache {
         return mcc.keySet();
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.hundsun.jres.interfaces.cache.BasicCache#put(java.lang.Object,
-     * java.lang.Object)
-     */
     public Object put(Object key, Object value) {
         return mcc.put(getSpaceKey((String) key), value);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.hundsun.jres.interfaces.cache.BasicCache#remove(java.lang.Object)
-     */
     public Object remove(Object key) {
         return mcc.remove(getSpaceKey((String) key));
     }

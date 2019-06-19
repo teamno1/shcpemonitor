@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<shard>	
+	<!-- redis节点配置开始 -->
+	<servernode>
+		<node>
+			<id>ShardRedisCache</id>
+			<!-- 最大的活动连接 -->
+			<maxActive>20</maxActive>
+			<!-- 最大的空闲连接 -->
+			<maxIdle>10</maxIdle>
+			<!-- 最大的等待时间 -->
+			<maxWait>1000</maxWait>
+			<!--Ip地址和端口 -->
+			<!-- 10.185.240.131:6379#10.185.240.131:6379 -->
+			<hosts>127.0.0.1:6379</hosts>
+		</node>
+	</servernode>
+	<!-- redis节点 配置结束 -->
+</shard>

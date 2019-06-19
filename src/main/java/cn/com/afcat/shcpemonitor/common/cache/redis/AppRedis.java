@@ -38,7 +38,7 @@ public class AppRedis {
      * @param token
      * @return
      */
-    public IRedisOperate getSecooRedis(String token){
+    public IRedisOperate getRedis(String token){
         if("ROUTING".equals(dispatch)){
             IRedisOperate redis = null;
             if("HASH".equals(clusterStrategy)){
@@ -65,7 +65,7 @@ public class AppRedis {
      * AppRedis.getAllRedisCluster()<BR>
      * @return
      */
-    public List<IRedisOperate> getAllSecooRedis(){
+    public List<IRedisOperate> getAllRedis(){
         return Collections.unmodifiableList(redisList);
     }
    
