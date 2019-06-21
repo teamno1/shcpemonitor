@@ -22,22 +22,10 @@ public class MapImpl implements IMapCache {
         this.space = space;
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.hundsun.jres.interfaces.cache.BasicCache#clear()
-     */
     public void clear() {
         mcc.clear();
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.hundsun.jres.interfaces.cache.BasicCache#containsKey(java.lang.Object
-     * )
-     */
     public boolean containsKey(Object key) {
         return mcc.containsKey(key);
     }
@@ -54,11 +42,6 @@ public class MapImpl implements IMapCache {
         return values.contains(value);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.hundsun.jres.interfaces.cache.BasicCache#get(java.lang.Object)
-     */
     public Object get(Object key) {
         Object object = mcc.get(key);
         return object;
@@ -82,22 +65,10 @@ public class MapImpl implements IMapCache {
         return mcc.keySet();
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.hundsun.jres.interfaces.cache.BasicCache#put(java.lang.Object,
-     * java.lang.Object)
-     */
     public Object put(Object key, Object value) {
         return mcc.put(key, value);
     }
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see
-     * com.hundsun.jres.interfaces.cache.BasicCache#remove(java.lang.Object)
-     */
     public Object remove(Object key) {
         return mcc.remove(key);
     }
